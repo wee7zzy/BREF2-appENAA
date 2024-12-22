@@ -121,6 +121,17 @@ public class Classe {
                 }else System.out.println("classe intouovable");
                 break;
 
+            case 6:
+                System.out.println("-----LISTES DES CLASSES-----");
+                for(Classe c :classes){
+                    System.out.println(c.nom+"\t"+c.id);
+                }
+                break;
+            default:
+                System.out.println("choix invalide");
+        }
+    }
+
 
 
         }
