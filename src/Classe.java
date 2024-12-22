@@ -54,6 +54,32 @@ public class Classe {
                 classes.add(new Classe(id,nom));
                 System.out.println("classe ajouter avec succes");
                 break;
+            case 2:
+                System.out.print("entrer l'id de classe a modifier :");
+                id=scanner.nextInt();
+
+                System.out.print("1-modifier nom\n"+
+                        "2-modifier id\n"+
+                        "---entrer choix:");
+                choix= scanner.nextInt();
+
+                for(Classe  classe : classes) {
+                    if (classe.getId()== id) {
+                        switch (choix) {
+                            case 1:
+                                System.out.print("entrer nouveau nom :");
+                                classe.setNom(scanner.next());
+                                System.out.println("Nom MODIFIER AVEC SUCCES ");
+                                break;
+                            case 2:
+                                System.out.print("entrer nouvelle ID :");
+                                classe.setId(scanner.nextInt());
+                                System.out.println("ID MODIFIER AVEC SUCCES ");
+                                break;
+                        }
+                    }
+                }
+                break;
 
 
 }
