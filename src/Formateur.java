@@ -52,6 +52,12 @@ public class Formateur extends Personne{
                 formateurs.add(new Formateur(nom,prenom,email,id,specialite,salaire));
                 System.out.println("FORMATEUR AJOUTER AVEC SUCCES");
                 break;
+            case 2:
+                System.out.print("entrer l'id du formateur a supprimer :");
+                id= scanner.nextInt();
+                formateurs.removeIf(a->a.getId()==id);//expression lambda
+                System.out.println("SUPPRESSION DU FORMATEUR AVEC SUCCES");
+                break;
 
 
 }
