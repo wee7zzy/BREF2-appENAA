@@ -22,9 +22,26 @@ public class Application {
                     "------ENTRER VOTRE CHOIX :");
             choix=scanner.nextInt();
 
-
-
-
-
-        }
+            switch (choix){
+                case 1:
+                    Classe.menuclasse(classe,formateur,apprenant);
+                    break;
+                case 2:
+                    Formateur.menuformateur(formateur);
+                    break;
+                case 3:
+                    Apprenant.menuApprenant(apprenant);
+                    break;
+                case 4:
+                    System.out.println("au revoir");
+                    scanner.close();
+                default:
+                    System.out.println("choix invalide");
+            }
+        }while (choix !=4);
+    }
 }
+
+
+
+
