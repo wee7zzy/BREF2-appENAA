@@ -45,5 +45,15 @@ public class Classe {
                 "-------ENTRER VOTRE CHOIX:");
         int choix=scanner.nextInt();
 
+        switch (choix){
+            case 1:
+                System.out.print("entrer id de classe :");
+                int id= scanner.nextInt();
+                System.out.print("entre nom de classe :");
+                String nom=scanner.next();
+                classes.add(new Classe(id,nom));
+                System.out.println("classe ajouter avec succes");
+                break;
+
 
 }
