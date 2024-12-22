@@ -53,6 +53,49 @@ public class Apprenant extends Personne{
                 apprenants.removeIf(a->a.getId()==id);//expression lambda
                 System.out.println("APPRENANT SUPPRIMER AVEC SUCCES");
                 break;
+            case 3:
+                System.out.print("entrer l'id de l'apprenant a modifier :");
+                id=scanner.nextInt();
+
+                System.out.print("1-modifier nom\n"+
+                        "2-modifier prenom\n"+
+                        "3-modifier email\n"+
+                        "4-modifier id\n"+
+                        "5-modifier note\n"+
+                        "---entrer choix:");
+                choix= scanner.nextInt();
+
+                for(Apprenant  apprenant : apprenants){
+                    if(apprenant.getId()==id){
+                        switch (choix){
+                            case 1:
+                                System.out.print("entrer nouveau nom :");
+                                apprenant.setNom(scanner.next());
+                                System.out.println("Nom MODIFIER AVEC SUCCES ");
+                                break;
+                            case 2:
+                                System.out.print("entrer nouveau prenom :");
+                                apprenant.setPrenom(scanner.next());
+                                System.out.println("PRENom MODIFIER AVEC SUCCES ");
+                                break;
+                            case 3:
+                                System.out.print("entrer nouveau email :");
+                                apprenant.setEmail(scanner.next());
+                                System.out.println("email MODIFIER AVEC SUCCES ");
+                                break;
+                            case 4:
+                                System.out.print("entrer nouvelle id :");
+                                apprenant.setId(scanner.nextInt());
+                                System.out.println("ID MODIFIER AVEC SUCCES ");
+                                break;
+                            case 5:
+                                System.out.print("entrer nouvelle note :");
+                                apprenant.setNotes(scanner.nextDouble());
+                                System.out.println("Note MODIFIER AVEC SUCCES ");
+                                break;
+                        }
+                    }
+                }break;
 
 
         }
