@@ -18,5 +18,14 @@ public class Apprenant extends Personne{
         this.notes = notes;
     }
 
+    static void menu(){
+        System.out.print("----MENU APPRENANT-----\n"+
+
+                "1-AJOUTER\n"+
+                "2-SUPPRIMER\n"+
+                "3-MODIFIER \n"+
+                "4-AFFICHER TOUS\n"+
+                "-----entrer votre choix:");
+    }
 
 }
