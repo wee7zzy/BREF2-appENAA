@@ -80,6 +80,13 @@ public class Classe {
                     }
                 }
                 break;
+            case 3:
+                System.out.print("entrer l'id de classe a supprimer :");
+                int idsp=scanner.nextInt();
+                classes.removeIf(a->a.getId()==idsp);
+                System.out.print("classe supprimer avec succes ");
+                break;
 
 
-}
+
+        }
