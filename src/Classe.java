@@ -86,6 +86,24 @@ public class Classe {
                 classes.removeIf(a->a.getId()==idsp);
                 System.out.print("classe supprimer avec succes ");
                 break;
+            case 4:
+                System.out.print("entrer id de classe choisie :");
+                id= scanner.nextInt();
+                Classe classe =classes.stream().filter(a->a.getId()==id).findFirst().orElse(null);
+                if(classe!=null){
+                    System.out.print("entrer id du formateur :");
+                    int idFormateur= scanner.nextInt();
+                    Formateur formateur=formateurs.stream().filter(a->a.getId()==idFormateur).findFirst().orElse(null);
+                    if( formateur!=null){
+                        classe.setFormateur(formateur);
+                        System.out.println("formateur assigner a la classe avec succes");
+                    }else {
+                        System.out.println("formateur introuvelble");
+                    }
+                }else {
+                    System.out.println("classe introuvable");
+                }
+                break;
 
 
 
