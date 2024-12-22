@@ -26,5 +26,14 @@ public class Formateur extends Personne{
         this.salaire = salaire;
     }
 
+    public static void menuformateur(ArrayList<Formateur> formateurs){
+        System.out.print("----MENU FORMATEUR-----\n"+
+                "1-AJOUTER FORMATEUR\n"+
+                "2-SUPPRIMER\n"+
+                "3-MODIFIER \n"+
+                "4-AFFICHER TOUS\n"+
+                "-----entrer votre choix:");
+        int choix = scanner.nextInt();
+
 
 }
