@@ -34,6 +34,16 @@ public class Classe {
     public void setApprenants(ArrayList<Apprenant> apprenants) {
         this.apprenants = apprenants;
     }
+    public static void menuclasse(ArrayList<Classe> classes,ArrayList<Formateur> formateurs,ArrayList<Apprenant> apprenants){
+        System.out.print("--------MENU CLASSE---------\n"+
+                "1-AJOUTER CLASSE \n"+
+                "2-MODIFIER\n"+
+                "3-SUPPRIMER CLASSE\n"+
+                "4-ASSOCIER FORMATEUR A UNE CLASSE \n"+
+                "5-ASSOCIER APPRENANT A UNE CLASSE \n"+
+                "6-Afficher lES CLASSES \n"+
+                "-------ENTRER VOTRE CHOIX:");
+        int choix=scanner.nextInt();
 
 
 }
