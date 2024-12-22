@@ -96,6 +96,16 @@ public class Apprenant extends Personne{
                         }
                     }
                 }break;
+            case 4:
+                System.out.println("------LISTES DES APPREANANTS :--------");
+                for(Apprenant apprenant:apprenants){
+                    System.out.println(apprenant.getNom()+"\t"+apprenant.getPrenom()+"\t"+apprenant.getId()+"\t"+apprenant.notes+"\t"+apprenant.getEmail());
+                }
+                break;
 
+            default:
+                System.out.println("CHOIX INVALIDE RESSAYER");
+        }
+    }
 
         }
