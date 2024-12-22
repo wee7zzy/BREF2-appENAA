@@ -27,5 +27,26 @@ public class Apprenant extends Personne{
                 "4-AFFICHER TOUS\n"+
                 "-----entrer votre choix:");
     }
+    public static void menuApprenant(ArrayList<Apprenant> apprenants){
 
-}
+        menu();
+        int choix = scanner.nextInt();
+
+        switch (choix){
+            case 1:
+                System.out.print("entrer nom d'apprenant :");
+                String nom= scanner.next();
+                System.out.print("entrer prenom d'apprenant :");
+                String prenom= scanner.next();
+                System.out.print("entrer email d'apprenant :");
+                String email= scanner.next();
+                System.out.print("entrer id d'apprenant :");
+                int id= scanner.nextInt();
+                System.out.print("entrer note :");
+                double note= scanner.nextDouble();
+                apprenants.add(new Apprenant(nom,prenom,email,id,note));
+                System.out.println("APPRENANT AJOUTER AVEC SUCCES");
+                break;
+
+
+        }
