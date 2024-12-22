@@ -47,6 +47,12 @@ public class Apprenant extends Personne{
                 apprenants.add(new Apprenant(nom,prenom,email,id,note));
                 System.out.println("APPRENANT AJOUTER AVEC SUCCES");
                 break;
+            case 2:
+                System.out.print("entrer l ' ID de l'apprenant a supprimer :");
+                id=scanner.nextInt();
+                apprenants.removeIf(a->a.getId()==id);//expression lambda
+                System.out.println("APPRENANT SUPPRIMER AVEC SUCCES");
+                break;
 
 
         }
