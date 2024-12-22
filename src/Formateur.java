@@ -58,6 +58,48 @@ public class Formateur extends Personne{
                 formateurs.removeIf(a->a.getId()==id);//expression lambda
                 System.out.println("SUPPRESSION DU FORMATEUR AVEC SUCCES");
                 break;
+            case 3:
+                System.out.print("entrer l'id du formateur a modifier :");
+                id= scanner.nextInt();
+
+                System.out.print("1-modifier nom\n"+
+                        "2-modifier prenom\n"+
+                        "3-modifier email\n"+
+                        "4-modifier id\n"+
+                        "5-modifier salaire\n"+
+                        "---entrer choix:");
+                choix= scanner.nextInt();
+                for(Formateur formateur : formateurs){
+                    if(formateur.getId()==id){
+                        switch (choix){
+                            case 1:
+                                System.out.print("entrer nouveau nom :");
+                                formateur.setNom(scanner.next());
+                                System.out.println("Nom MODIFIER AVEC SUCCES ");
+                                break;
+                            case 2:
+                                System.out.print("entrer nouveau prenom :");
+                                formateur.setPrenom(scanner.next());
+                                System.out.println("PRENom MODIFIER AVEC SUCCES ");
+                                break;
+                            case 3:
+                                System.out.print("entrer nouveau email :");
+                                formateur.setEmail(scanner.next());
+                                System.out.println("email MODIFIER AVEC SUCCES ");
+                                break;
+                            case 4:
+                                System.out.print("entrer nouvelle id :");
+                                formateur.setId(scanner.nextInt());
+                                System.out.println("ID MODIFIER AVEC SUCCES ");
+                                break;
+                            case 5:
+                                System.out.print("entrer nouveau salaire :");
+                                formateur.setSalaire(scanner.nextDouble());
+                                System.out.println("salaire MODIFIER AVEC SUCCES ");
+                                break;
+                        }
+                    }
+                }break;
 
 
 }
