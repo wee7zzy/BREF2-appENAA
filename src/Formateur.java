@@ -100,6 +100,19 @@ public class Formateur extends Personne{
                         }
                     }
                 }break;
+            case 4:
+                System.out.println("------LISTE FORMATEUR------");
+                for(Formateur formateur : formateurs){
+                    System.out.println(formateur.getNom()+"\t"+formateur.getPrenom()+"\t"+formateur.getId()+"\t"+formateur.getEmail()+"\t"+ formateur.getSalaire());
+                }
+                break;
+
+            default:
+                System.out.println("choix invalide ressayer");
+        }
+
+
+    }
 
 
 }
