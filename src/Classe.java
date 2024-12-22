@@ -104,6 +104,22 @@ public class Classe {
                     System.out.println("classe introuvable");
                 }
                 break;
+            case 5:
+                System.out.print("entrer l'id de la classe :");
+                int idc= scanner.nextInt();
+                Classe classe1=classes.stream().filter(c->c.getId()==idc).findFirst().orElse(null);
+                if(classe1!=null){
+                    System.out.print("entrer id apprenant :");
+                    int idApp= scanner.nextInt();
+                    Apprenant apprenant=apprenants.stream().filter(a->a.getId()==idApp).findFirst().orElse(null);
+                    if(apprenant!=null){
+                        classe1.setApprenants(apprenants);
+                        System.out.println("apprenant ajouter a la classe avec succes");
+                    }else {
+                        System.out.println("apprenant introuvable");
+                    }
+                }else System.out.println("classe intouovable");
+                break;
 
 
 
