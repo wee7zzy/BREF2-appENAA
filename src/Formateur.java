@@ -35,5 +35,23 @@ public class Formateur extends Personne{
                 "-----entrer votre choix:");
         int choix = scanner.nextInt();
 
+        switch (choix){
+            case 1:
+                System.out.print("entrer nom formateur :");
+                String nom= scanner.next();
+                System.out.print("entrer prenom formateur :");
+                String prenom= scanner.next();
+                System.out.print("entrer email formateur :");
+                String email= scanner.next();
+                System.out.print("entrer ID formateur :");
+                int id= scanner.nextInt();
+                System.out.print("entrer salaire formateur :");
+                double salaire= scanner.nextDouble();
+                System.out.print("entrer spcialite :");
+                String specialite=scanner.next();
+                formateurs.add(new Formateur(nom,prenom,email,id,specialite,salaire));
+                System.out.println("FORMATEUR AJOUTER AVEC SUCCES");
+                break;
+
 
 }
